@@ -1,0 +1,79 @@
+body {
+    background-image: url("http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.register {
+background: -webkit-linear-gradient(left, #e6048f, #080808);
+margin-top: 6%;
+padding: 3%;
+}
+
+.register-left {
+text-align: center;
+color: #fff;
+margin-top: 4%;
+margin-left: 3%;
+}
+
+.register-right {
+background: #eeb1cf;
+border-top-left-radius: 10% 50%;
+border-bottom-left-radius: 10% 50%;
+margin-left: 5%;
+}
+
+.register-left img {
+margin-bottom: 5%;
+width: 60%;
+border-radius: 50%;
+}
+
+.register-left h1 {
+font-weight: bolder;
+text-shadow: 2px 2px 3px pink;
+}
+.register-left p {
+font-weight: lighter;
+padding: 12%;
+margin-top: -9%;
+font-size: 20px;
+
+}
+
+
+.register .register-form {
+padding: 10%;
+margin-top: 10%;
+}
+
+.btnRegister {
+ margin-left: 100px; 
+margin-top: 5%;
+border: none;
+padding: 2%;
+background: blue;
+color: #fff;
+font-weight: 600;
+width: 50%; 
+}
+.btnRegister:hover{
+box-shadow: 0 0 5px blue, 0 0 25px blue, 0 0 50px blue,
+  0 0 100px blue;
+}
+
+
+.register .nav-tabs {
+
+border: none;
+border-radius: 1.5rem;
+}
+
+.register-heading {
+text-align: center;
+margin-top: 8%;
+margin-bottom: -15%;
+color: #495057;
+}
