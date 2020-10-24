@@ -3,7 +3,7 @@
 
     if(isset($_POST['add'])){
         
-        $_SESSION['bookmarks'][$_POST['bname']] = [$_POST['urlinput']];
+        $_SESSION['bookmarks'][$_POST['bname']] = $_POST['urlinput'];
     }
     if (isset($_POST['clear'])) {
         $_SESSION['bookmarks'] = array();
@@ -125,16 +125,18 @@
             </form>
             <table>
                 <tbody>
-                <?php foreach($_SESSION['bookmarks'] as $bookmarkName =>  $bookmarkUrl ){ ?>
+                <?php 
+                if(isset($_SESSION['bookmarks'])){
+                foreach($_SESSION['bookmarks'] as $bookmarkName =>  $bookmarkUrl ){ ?>
                     <tr>
-                            <td><a href="<?php echo 'https://'. $bookmarkUrl; ?>" target="_blank"> <?php echo $bookmarkName;?></a></td> 
+                            <td><a href="<?php echo  $bookmarkUrl; ?>" target="_blank"> <?php echo $bookmarkName;?></a></td> 
                             <form action="" method="POST">
                             <td><input type="hidden" class = "output" name="bookmark" value="<?php echo $bookmarkName; ?>"></td>
                             <td><input type="submit" value="X" name="clearBookmark" ></td>
                             </form>
                     </tr>
                    
-                <?php }?>
+                <?php }}?>
                 </tbody>
             </table>
            
