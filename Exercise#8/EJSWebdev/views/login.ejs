@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+<style>
+    body{
+        background:black;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-image: url("https://wallpaperaccess.com/full/527686.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+    .container{
+        width: 400px;
+        padding: 40px;
+        top: 50%;
+        left: 50%;
+        margin-left: 28%;
+        background: rgba(36, 35, 35, 0.644);
+        text-align: center;
+        transition: 0.25s;
+        margin-top: 70px;
+        border-radius: 10px;
+    }
+    .containerHeader h1 {
+        color: white;
+        text-transform: uppercase;
+        font-size: 40px;
+        
+    }
+    .containerBody p {
+        color: rgb(243, 229, 229);
+        font-size: 20px;
+    }
+    .mail{
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #f00cab;
+        padding: 10px 10px;
+        width: 250px;
+        font-size: 16px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s
+    }
+    .mail:focus{
+        width: 300px;
+        border-color: yellow;
+    }
+    .pass{
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #f00cab;
+        padding: 10px 10px;
+        width: 250px;
+        font-size: 16px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s
+    }
+    .pass:focus{
+        width: 300px;
+        border-color: rgb(230, 62, 32);
+    }
+    .submit{
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #f00cab;
+        padding: 14px 40px;
+        outline: none;
+        color: white;
+        font-size: 18px;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer
+    }
+    .submit:hover{
+        background: #f00cab;
+        
+    }
+    
+
+
+</style>
+    
+</head>
+
+<body>
+    <form action="/login" method="POST">
+        <div class="container">
+            <div class="containerHeader">
+                <h1>Login</h1>
+            </div>
+            <div class="containerBody">
+                <p> Please fill the information needed!</p>
+                <span><%= (error)?(error.email == undefined)?"": error.email:""%></span>
+                <input class="mail" type="email" name="email" placeholder="Email" required>
+                <span><%= (error)?(error.password == undefined)?"": error.password:""%></span>
+                <input class="pass" type="password" name="password" placeholder="Password" required> 
+
+                <input class = "submit" type="submit" name="Submit"   value="Login">
+            </div>
+    
+        </div>
+    
+    </form>
+    
+</body>
+
+</html>
